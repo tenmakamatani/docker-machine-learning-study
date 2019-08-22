@@ -1,24 +1,39 @@
 # docker-python
 
-dockerを使ってpythonプログラムを動かす雛形
+dockerを使ってpythonプログラムを動かす雛形、機械学習に必要なライブラリも一気にインストールします
 
-## How to install
+## How to run
+
+### clone
 
 ```
 $ git clone https://github.com/tenmakamatani/docker-python.git
 $ cd docker-python
 ```
 
-### Run in container
+### Local
 
 ```
-$ docker build -t docker-python .
-$ docker run docker-python
+$ python python/workspace/index.py
 ```
 
-### Enter the container
+### Docker
+
+#### build and up
 
 ```
-$ docker build -t docker-python .
-$ docker run -it docker-python /bin/bash
+$ docker-compose build
+$ docker-compose up -d
+```
+
+#### open interactive shell
+
+```
+$ docker-compose run python
+```
+
+#### enter console
+
+```
+$ docker-compose exec python bash
 ```
