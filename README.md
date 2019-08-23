@@ -19,21 +19,26 @@ $ python python/workspace/index.py
 
 ### Docker
 
-#### build and up
+#### start service
 
 ```
-$ docker-compose build
-$ docker-compose up -d
-```
-
-#### open interactive shell
-
-```
-$ docker-compose run python
+$ docker-compose up --build
 ```
 
 #### enter console
 
 ```
 $ docker-compose exec python bash
+```
+
+#### stop service
+
+```
+$ docker-compose stop
+```
+
+#### stop container
+
+```
+$ docker-compose down
 ```
