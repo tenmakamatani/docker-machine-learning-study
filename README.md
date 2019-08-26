@@ -22,23 +22,35 @@ $ python python/workspace/index.py
 #### start service
 
 ```
-$ docker-compose up --build
+$ make start
 ```
 
 #### enter console
 
 ```
-$ docker-compose exec python bash
+$ make bash
+```
+
+#### run program
+
+```
+$ make run
 ```
 
 #### stop service
 
 ```
-$ docker-compose stop
+$ make kill
 ```
 
-#### stop container
+#### restart service
 
 ```
-$ docker-compose down
+$ make restart
+```
+
+### Show logs
+
+```
+$ make logs
 ```
